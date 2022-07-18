@@ -39,17 +39,17 @@ export default function TransactionDetail() {
 
   return (
     <div className="transaction-detail">
-      <TransactionCard />
+      <TransactionCard transaction={transaction} transactionId={transactionId} hasFetched={hasFetched} isLoading={isLoading}/>
     </div>
   );
 }
 
-export function TransactionCard({ transaction = {}, transactionId = null }) {
+export function TransactionCard({ transaction = {}, transactionId = null,hasFetched, isLoading }) {
   return (
     <div className="transaction-card card">
       <div className="card-header">
         <h3>Transaction #{transactionId}</h3>
-        <p className="category"></p>
+        <p className="category">{transaction.category}</p>
       </div>
 
       <div className="card-content">

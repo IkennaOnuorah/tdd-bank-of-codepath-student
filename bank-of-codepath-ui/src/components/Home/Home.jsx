@@ -80,7 +80,7 @@ export default function Home(props) {
       />
       {props.error ? <h2 className="error">Error message</h2> : null}
       {props.isLoading ? (
-        <h1>Loading...</h1>
+        <h1> Loading...</h1>
       ) : (
         <BankActivity
           transactions={filteredTransactions}
